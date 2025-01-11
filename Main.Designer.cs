@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             gpFiles = new GroupBox();
             btn_ServerEnum = new Button();
             btn_ItensEquipClient = new Button();
@@ -40,6 +41,7 @@
             lbItemsServer = new Label();
             Btn_Start = new Button();
             btn_Save = new Button();
+            toolTip1 = new ToolTip(components);
             gpFiles.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,6 +71,7 @@
             btn_ServerEnum.Name = "btn_ServerEnum";
             btn_ServerEnum.Size = new Size(27, 27);
             btn_ServerEnum.TabIndex = 12;
+            toolTip1.SetToolTip(btn_ServerEnum, "Procure pelo arquivo ROZERO-SERVER-GH\\db\\re\\item_randomopt_db.yml");
             btn_ServerEnum.UseVisualStyleBackColor = true;
             btn_ServerEnum.Click += btn_ServerEnum_Click;
             // 
@@ -80,6 +83,7 @@
             btn_ItensEquipClient.Name = "btn_ItensEquipClient";
             btn_ItensEquipClient.Size = new Size(27, 27);
             btn_ItensEquipClient.TabIndex = 9;
+            toolTip1.SetToolTip(btn_ItensEquipClient, "Procure pelo arquivo ROZERO-CLIENT-GH\\GameBO\\JsonDatabase\\ItemsRaEquip.json");
             btn_ItensEquipClient.UseVisualStyleBackColor = true;
             btn_ItensEquipClient.Click += btn_ItensEquipClient_Click;
             // 
@@ -90,6 +94,7 @@
             txb_ItensEquipClient.ReadOnly = true;
             txb_ItensEquipClient.Size = new Size(685, 23);
             txb_ItensEquipClient.TabIndex = 8;
+            toolTip1.SetToolTip(txb_ItensEquipClient, "Procure pelo arquivo ROZERO-CLIENT-GH\\GameBO\\JsonDatabase\\ItemsRaEquip.json");
             // 
             // txb_ServerEnum
             // 
@@ -98,6 +103,7 @@
             txb_ServerEnum.ReadOnly = true;
             txb_ServerEnum.Size = new Size(685, 23);
             txb_ServerEnum.TabIndex = 11;
+            toolTip1.SetToolTip(txb_ServerEnum, "Procure pelo arquivo ROZERO-SERVER-GH\\db\\re\\item_randomopt_db.yml");
             // 
             // lbl_ClientEquipItems
             // 
@@ -107,6 +113,7 @@
             lbl_ClientEquipItems.Size = new Size(207, 15);
             lbl_ClientEquipItems.TabIndex = 7;
             lbl_ClientEquipItems.Text = "Client Equip Itens (ItemsRaEquip.json)";
+            toolTip1.SetToolTip(lbl_ClientEquipItems, "Procure pelo arquivo ROZERO-CLIENT-GH\\GameBO\\JsonDatabase\\ItemsRaEquip.json");
             // 
             // Btn_ItemsServer
             // 
@@ -116,6 +123,7 @@
             Btn_ItemsServer.Name = "Btn_ItemsServer";
             Btn_ItemsServer.Size = new Size(27, 27);
             Btn_ItemsServer.TabIndex = 3;
+            toolTip1.SetToolTip(Btn_ItemsServer, "Procure pelo arquivo ROZERO-SERVER-GH\\db\\items_rozero.yml");
             Btn_ItemsServer.UseVisualStyleBackColor = true;
             Btn_ItemsServer.Click += Btn_ItemsServer_Click;
             // 
@@ -127,6 +135,8 @@
             lbl_ServerItemEnum.Size = new Size(262, 15);
             lbl_ServerItemEnum.TabIndex = 10;
             lbl_ServerItemEnum.Text = "Server ItemOpt Enum (item_randomopt_db.yml)";
+            lbl_ServerItemEnum.TextAlign = ContentAlignment.TopCenter;
+            toolTip1.SetToolTip(lbl_ServerItemEnum, "Procure pelo arquivo ROZERO-SERVER-GH\\db\\re\\item_randomopt_db.yml");
             // 
             // Txb_ItemsServer
             // 
@@ -135,6 +145,7 @@
             Txb_ItemsServer.ReadOnly = true;
             Txb_ItemsServer.Size = new Size(685, 23);
             Txb_ItemsServer.TabIndex = 2;
+            toolTip1.SetToolTip(Txb_ItemsServer, "Procure pelo arquivo ROZERO-SERVER-GH\\db\\items_rozero.yml");
             // 
             // lbItemsServer
             // 
@@ -144,6 +155,7 @@
             lbItemsServer.Size = new Size(172, 15);
             lbItemsServer.TabIndex = 0;
             lbItemsServer.Text = "Server Items (items_rozero.yml)";
+            toolTip1.SetToolTip(lbItemsServer, "Procure pelo arquivo ROZERO-SERVER-GH\\db\\items_rozero.yml");
             // 
             // Btn_Start
             // 
@@ -202,5 +214,6 @@
         private Button btn_ServerEnum;
         private TextBox txb_ServerEnum;
         private Label lbl_ServerItemEnum;
+        private ToolTip toolTip1;
     }
 }
